@@ -30,7 +30,6 @@ const HomeScreen = () => {
         keyExtractor={(item) => item._id}
         renderItem={({item}) => <PostHomeCard item={item} />}
       />
-      <DividerWithSpacer />
     </SafeAreaView>
   );
 };

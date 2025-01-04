@@ -63,6 +63,19 @@ const PostHomeCard = ({item}) => {
             />
           )}
         />
+        <Card.Content
+          style={[
+            {backgroundColor: colors.primaryContainer},
+            styles.cardDescription,
+          ]}
+        >
+          <Text variant="titleMedium" style={{color: colors.text}}>
+            {item.title}
+          </Text>
+          <Text variant="bodyMedium" style={{color: colors.text}}>
+            {item.description}
+          </Text>
+        </Card.Content>
         <Card.Cover
           source={{uri: item.imageUrl}}
           resizeMode="contain"
@@ -71,7 +84,7 @@ const PostHomeCard = ({item}) => {
         <Card.Content
           style={[
             {backgroundColor: colors.primaryContainer},
-            styles.cardContent,
+            styles.cardButtonsContainer,
           ]}
         >
           <PostIconButtons
@@ -81,12 +94,6 @@ const PostHomeCard = ({item}) => {
             onLike={handleLikePost}
             onUnlike={handleUnlikePost}
           />
-          <Text variant="titleMedium" style={{color: colors.text}}>
-            {item.title}
-          </Text>
-          <Text variant="bodyMedium" style={{color: colors.text}}>
-            {item.description}
-          </Text>
         </Card.Content>
 
         <IconButton
@@ -124,12 +131,12 @@ const styles = StyleSheet.create({
   icon: {
     position: "absolute",
     left: 228,
-    bottom: 150,
+    bottom: 50,
   },
   badge: {
     position: "absolute",
     left: 250,
-    bottom: 175,
+    bottom: 75,
   },
   image: {
     height: 400,
@@ -140,8 +147,13 @@ const styles = StyleSheet.create({
     borderTopEndRadius: 15,
     borderTopStartRadius: 15,
   },
-  cardContent: {
-    height: 150,
+  cardDescription: {
+    paddingBottom: 10,
+  },
+  cardButtonsContainer: {
+    height: 50,
+    borderBottomEndRadius: 10,
+    borderBottomLeftRadius: 10,
   },
 });
 

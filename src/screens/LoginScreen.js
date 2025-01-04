@@ -39,10 +39,10 @@ const LoginScreen = () => {
           variant="headlineMedium"
           style={[{color: colors.text}, styles.formTitle]}
         >
-          Login
+          Enter to Outfy
         </Text>
         <Text variant="titleMedium" style={[{color: colors.text}]}>
-          Enter your account
+          Log in
         </Text>
       </View>
       <View
